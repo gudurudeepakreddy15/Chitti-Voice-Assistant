@@ -1,25 +1,30 @@
-# Chitti AI 🤖
+# Chitti-Voice-Assistant 🤖
 
-Chitti AI is a Python-based voice assistant for Windows.
-
-It listens to voice commands, understands them using speech recognition, and performs useful actions such as opening websites, searching Google, and launching Windows applications.
+**Chitti — Voice Assistant** is a Python-based voice assistant for Windows. It listens to voice commands and performs actions such as opening websites, searching Google, and launching Windows applications.
 
 ## Features
 
 * 🎤 Voice command recognition
 * 🔊 Voice responses
-* 🌐 Open popular websites
+* 🌐 Open websites using voice commands
 * 🔎 Google search using voice
-* 🖥️ Open Windows applications
+* 🖥️ Launch Windows applications
 * 🌐 Open Chrome
 * 👋 Greeting commands
-* 🛑 Stop commands
+* 🛑 Stop/exit commands
 * 🎧 Microphone noise calibration
-* 🗂️ Modular Python project structure
+
+## Modules / Libraries Used
+
+* **Python**
+* **SpeechRecognition** — voice recognition
+* **PyAudio** — microphone input
+* **pyttsx3** — voice responses
+* **webbrowser** — opening websites
+* **subprocess** — launching Windows applications
+* **urllib.parse** — processing search queries
 
 ## Supported Websites
-
-Chitti can open websites such as:
 
 * YouTube
 * ChatGPT
@@ -44,9 +49,7 @@ Chitti can open websites such as:
 * Microsoft
 * X
 
-## Windows Applications
-
-Chitti can open:
+## Supported Windows Applications
 
 * Calculator
 * Notepad
@@ -57,74 +60,44 @@ Chitti can open:
 * Task Manager
 * Chrome
 
-## Technologies Used
+## Installation
 
-* Python
-* SpeechRecognition
-* PyAudio
-* Windows PowerShell
-* Web browser automation
+### 1. Clone the repository
 
-## Project Structure
-
-```text
-chitti AI/
-│
-├── assistant/
-│   ├── __init__.py
-│   ├── main.py
-│   ├── speech.py
-│   ├── websites.py
-│   ├── applications.py
-│   └── commands.py
-│
-├── config/
-│   ├── __init__.py
-│   └── settings.py
-│
-├── main.py
-├── requirements.txt
-├── .gitignore
-└── README.md
+```bash
+git clone <your-repository-url>
+cd Chitti-Voice-Assistant
 ```
 
-## How to Run
-
-### 1. Install the required packages
+### 2. Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. Start Chitti
-
-Open the terminal inside the project folder and run:
+### 3. Run Chitti
 
 ```bash
 py -m assistant.main
 ```
 
-### 3. Give a voice command
-
-For example:
+## Example Voice Commands
 
 ```text
-Open YouTube
-Open W3Schools
-Open LeetCode
-Search Python functions
-Open Calculator
-Stop Chitti
+"Hello Chitti"
+"Good morning Chitti"
+"Open YouTube"
+"Open GitHub"
+"Search Python functions"
+"Open Calculator"
+"Open Chrome"
+"Stop Chitti"
 ```
 
-## Future Improvements
+## How It Works
 
-* Control the computer using voice
-* Add more applications
-* Add more natural conversations
-* Add weather information
-* Add reminders
-* Add AI-powered question answering
-* Add more voice commands
-
-
+1. 🎤 Chitti listens to your voice.
+2. 🧠 Speech recognition converts voice into text.
+3. ⚙️ Chitti identifies the command.
+4. 💻 The requested action is performed.
+5. 🔊 Chitti responds with voice.
